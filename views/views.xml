@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='ref']" position="after">
                     <group>
-                        <field name="pago_app" widget="toggle_button"/>
+                        <field name="pago_app" widget="boolean_toggle"/>
                     </group>
                 </xpath>
             </field>
@@ -39,8 +39,8 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='partner_id']" position="after">
                     <group>
-                        <field name="venta_credito" widget="toggle_button"/>
-                        <field name="preventa" widget="toggle_button"/>
+                        <field name="venta_credito" widget="boolean_toggle"/>
+                        <field name="preventa" widget="boolean_toggle"/>
                     </group>
                 </xpath>
             </field>
