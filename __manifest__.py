@@ -10,7 +10,7 @@
     'icon': 'vds_rutrack_app/static/description/icon.png',
     'category': 'Uncategorized',
     'version': '0.1',
-    'depends': ['base'],
+    'depends': ['base', 'account', 'sale', 'product'],
     'data': [
         'security/ir.model.access.csv',
         'views/views.xml',
