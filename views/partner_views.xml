@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_res_partner_form_inherit_vds_rutrack_app" model="ir.ui.view">
+            <name>res.partner.form.inherit.vds_rutrack_app</name>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <field name="saldo_vencido" widget="statusbar"/>
+                </xpath>
+                <xpath expr="//page[@name='sales_purchases']" position="inside">
+                    <group>
+                        <field name="objetivo"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
