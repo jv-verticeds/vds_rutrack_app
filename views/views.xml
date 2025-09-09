@@ -2,7 +2,7 @@
 <odoo>
     <data>
         <record id="view_account_payment_form_inherit_vds_rutrack_app" model="ir.ui.view">
-            <name>account.payment.form.inherit.vds_rutrack_app</name>
+            <field name="name">account.payment.form.inherit.vds_rutrack_app</field>
             <field name="model">account.payment</field>
             <field name="inherit_id" ref="account.view_account_payment_form"/>
             <field name="arch" type="xml">
@@ -13,7 +13,7 @@
         </record>
 
         <record id="view_res_partner_form_inherit_vds_rutrack_app" model="ir.ui.view">
-            <name>res.partner.form.inherit.vds_rutrack_app</name>
+            <field name="name">res.partner.form.inherit.vds_rutrack_app</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
@@ -29,7 +29,7 @@
         </record>
 
         <record id="view_sale_order_form_inherit_vds_rutrack_app" model="ir.ui.view">
-            <name>sale.order.form.inherit.vds_rutrack_app</name>
+            <field name="name">sale.order.form.inherit.vds_rutrack_app</field>
             <field name="model">sale.order</field>
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
@@ -40,7 +40,7 @@
         </record>
 
         <record id="product_template_form_view_inherit_vds_rutrack_app" model="ir.ui.view">
-            <name>product.template.form.inherit.vds_rutrack_app</name>
+            <field name="name">product.template.form.inherit.vds_rutrack_app</field>
             <field name="model">product.template</field>
             <field name="inherit_id" ref="product.product_template_form_view"/>
             <field name="arch" type="xml">
