@@ -6,7 +6,7 @@ from odoo.exceptions import ValidationError
 class ProductTemplate(models.Model):
     _inherit = 'product.template'
 
-    imagen_app = fields.Binary(string='Imagen para App')
+    imagen_app = fields.Binary(string='Imagen para App', attachment=False)
     _max_image_size_kb = 2048  # Límite de 2MB (2048 KB)
 
     @api.constrains('imagen_app')
