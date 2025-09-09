@@ -6,9 +6,9 @@
             <field name="model">account.payment</field>
             <field name="inherit_id" ref="account.view_account_payment_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//sheet" position="inside">
+                <xpath expr="//field[@name='ref']" position="after">
                     <group>
-                        <field name="pago_app"/>
+                        <field name="pago_app" widget="toggle_button"/>
                     </group>
                 </xpath>
             </field>
@@ -19,7 +19,7 @@
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//sheet" position="inside">
+                <xpath expr="//field[@name='vat']" position="after">
                     <group>
                         <field name="saldo_vencido"/>
                     </group>
@@ -37,9 +37,10 @@
             <field name="model">sale.order</field>
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//sheet" position="inside">
+                <xpath expr="//field[@name='partner_id']" position="after">
                     <group>
-                        <field name="venta_credito"/>
+                        <field name="venta_credito" widget="toggle_button"/>
+                        <field name="preventa" widget="toggle_button"/>
                     </group>
                 </xpath>
             </field>
