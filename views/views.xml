@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!-- Aquí irán las vistas -->
+        <record id="view_account_payment_form_inherit_vds_rutrack_app" model="ir.ui.view">
+            <name>account.payment.form.inherit.vds_rutrack_app</name>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <field name="pago_app" widget="statusbar"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_res_partner_form_inherit_vds_rutrack_app" model="ir.ui.view">
+            <name>res.partner.form.inherit.vds_rutrack_app</name>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <field name="saldo_vencido" widget="statusbar"/>
+                </xpath>
+                <xpath expr="//page[@name='sales_purchases']" position="inside">
+                    <group>
+                        <field name="objetivo"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_sale_order_form_inherit_vds_rutrack_app" model="ir.ui.view">
+            <name>sale.order.form.inherit.vds_rutrack_app</name>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <field name="venta_credito" widget="statusbar"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_template_form_view_inherit_vds_rutrack_app" model="ir.ui.view">
+            <name>product.template.form.inherit.vds_rutrack_app</name>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='image_1920']" position="after">
+                    <field name="imagen_app" widget="image" class="oe_avatar"/>
+                </xpath>
+            </field>
+        </record>
     </data>
 </odoo>

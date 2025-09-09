@@ -14,10 +14,6 @@
     'data': [
         'security/ir.model.access.csv',
         'views/views.xml',
-        'views/payment_views.xml',
-        'views/partner_views.xml',
-        'views/sale_views.xml',
-        'views/product_views.xml',
     ],
     'demo': [
         'demo/demo.xml',
